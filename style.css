@@ -1,0 +1,121 @@
+body {
+  text-align: center;
+  background-color: darkcyan;
+  color: rgb(151, 10, 80);
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 60px;
+  text-decoration: underline;
+}
+.goldImg,
+.dpsImg {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.monsterImg {
+  width: 300px;
+}
+
+.goldText,
+#dpsLabel {
+  font-weight: bolder;
+  font-size: 30px;
+}
+.dpsText {
+  padding-left: 20px;
+}
+#monsterHp {
+  font-weight: bolder;
+  font-size: 50px;
+  color: rgb(228, 0, 0);
+  margin-top: 0;
+}
+.moneyDiv,
+.dpsDiv {
+  width: fit-content;
+  max-width:500px;
+  display: inline-flex;
+  float: left;
+  color: rgb(228, 0, 0);
+  background-color: lightgray;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 20%;
+}
+
+.themeSelectDiv {
+  float: right;
+}
+.stageBtn {
+  border-radius: 30%;
+  background-color: rgb(151, 10, 80);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bolder;
+}
+.monsterDiv {
+  display: flex;
+  flex-direction: column;
+}
+.stageSelectionDiv {
+  margin-top: 15px;
+}
+.hpBar {
+  margin: auto;
+  width: 20%;
+  border: 2px solid white;
+}
+.hpBarInside {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+}
+
+.shopDiv {
+  position: fixed;
+  left: 5px;
+  top: 350px;
+  width: 200px;
+  height: 400px;
+  background-color: rgb(51, 102, 161);
+  border: 2px solid black;
+  border-radius: 5%;
+}
+.shopImg {
+  position: fixed;
+  top: 275px;
+  left: 0;
+  width: 75px;
+  height: 75px;
+}
+.shopItem {
+  display: flex;
+  justify-content: center;
+}
+.shopItemText {
+  margin: auto;
+}
+.shopBuyBtn {
+  margin: auto;
+  margin-left: 0px;
+  width: 60px;
+  border-radius: 40%;
+}
+@media (max-width: 1110px) {
+  body {
+    background-color: green;
+  }
+
+  /* .goldImg,
+  .dpsImg {
+    width: 50px;
+    height: 50px;
+  } */
+  .themeSelectDiv {
+    display: block;
+  }
+}
