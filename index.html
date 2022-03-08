@@ -64,7 +64,7 @@
             </div>
             
             <p id="stageNum">1</p>
-            
+            <button id="winBtn" class="winBtn">Win the Game</button>
             
     </div>
     <script>
@@ -76,7 +76,6 @@
         var stageNum = document.getElementById('stageNum')
         var dpsLabel = document.getElementById('dpsLabel')
         var hpBar = document.getElementById('hpBarInside')
-        
 
         var dps = 1
         var killCount = 0
@@ -133,7 +132,13 @@
                 stageNum.textContent = ++stage
                 stageSelector()
             })
-        
+            document.getElementById("winBtn").addEventListener("click", function(){
+                if(gold >= 1000000){
+                    gold = 0
+                    stage = 0
+                    alert("You win! Get a life!!!!!!!!!")
+                }
+            })
             stageSelector()
             newDps(dps)
         }
