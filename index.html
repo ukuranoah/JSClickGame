@@ -42,6 +42,10 @@
                 <div class="shopItem">
                     <p class="shopItemText">Master Ball</p>
                     <button type="button" class="shopBuyBtn" id="masterBallBtn">Buy <br>50g</button>
+                </div><br>
+                <div class="shopItem">
+                    <p class="shopItemText">TM08</p>
+                    <button type="button" class="shopBuyBtn" id="toxicBuyBtn">Buy <br>1000g</button>
                 </div>
             </div>
 
@@ -121,6 +125,14 @@
                     newDps(dps)
                 }
             })
+            document.getElementById("toxicBuyBtn").addEventListener("click", function(){
+                var goldInt = Number(gold.innerHTML)
+                if(goldInt >= 1000){
+                    gold.innerHTML -= 1000
+                    dps += 50
+                    newDps(dps)
+                }
+            })
             document.getElementById("previousStage").addEventListener("click", function(){
                 if(stage > 1){
                     stageNum.textContent = --stage
@@ -133,7 +145,7 @@
                 stageSelector()
             })
             document.getElementById("winBtn").addEventListener("click", function(){
-                if(gold >= 1000000){
+                if(gold >= 10){
                     gold = 0
                     stage = 0
                     alert("You win! Get a life!!!!!!!!!")
@@ -173,7 +185,7 @@
             else if(stage == 6){
                 setHp = 999999
                 goldPerKill = 50000
-                document.getElementById('monsterPic').src = "images/monsters/lugia.png"
+                document.getElementById('monsterPic').src = "images/monsters/craig.png"
             }
             //setting initial hp
             hp.textContent = setHp
